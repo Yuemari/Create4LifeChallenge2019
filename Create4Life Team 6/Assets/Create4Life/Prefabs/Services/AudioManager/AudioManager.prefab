@@ -1,0 +1,152 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1313873233215408}
+  m_IsPrefabParent: 1
+--- !u!1 &1313873233215408
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4489347420182040}
+  - component: {fileID: 114185240219813288}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4489347420182040
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1313873233215408}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114185240219813288
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1313873233215408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2278aa20c2762749805d9a1cb5a75de, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoInitialize: 0
+  dontDestroyOnLoad: 1
+  usePooledAudioObjects: 1
+  globalVolume: 1
+  audioObjDefaultPrefab: {fileID: 114783196566995070, guid: ab15d9442a985134cbf63ec7cb782f8a,
+    type: 2}
+  categoriesList:
+  - categoryId: MUSIC
+    serializeStatus: 1
+    mustShowDebugInfo: 0
+    isEnabled: 1
+    onlyOneItemAllowed: 1
+    audioObjPrefab: {fileID: 114026594553986832, guid: a55f17a54d1a79b439f530117aed7cca,
+      type: 2}
+    volume: 1
+    itemsList:
+    - itemId: MainMenu
+      mustShowDebugInfo: 0
+      volume: 1
+      minTimeBetweenPlay: 0
+      subItemPickMode: 1
+      subItemsList:
+      - audioClip: {fileID: 8300000, guid: bab072975ee7e7148b7575f7e52f2103, type: 3}
+        volume: 1
+    - itemId: Match
+      mustShowDebugInfo: 0
+      volume: 1
+      minTimeBetweenPlay: 0
+      subItemPickMode: 1
+      subItemsList:
+      - audioClip: {fileID: 8300000, guid: 7fc28ce420950944b9b2c3155a4dd8c2, type: 3}
+        volume: 1
+    - itemId: Results
+      mustShowDebugInfo: 0
+      volume: 1
+      minTimeBetweenPlay: 0
+      subItemPickMode: 1
+      subItemsList:
+      - audioClip: {fileID: 8300000, guid: 7b4e035e03fa79847a5d7d50216b5bfa, type: 3}
+        volume: 1
+    lastPlayedId: 
+  - categoryId: SFX
+    serializeStatus: 1
+    mustShowDebugInfo: 0
+    isEnabled: 1
+    onlyOneItemAllowed: 0
+    audioObjPrefab: {fileID: 114783196566995070, guid: ab15d9442a985134cbf63ec7cb782f8a,
+      type: 2}
+    volume: 1
+    itemsList:
+    - itemId: ButtonPressed
+      mustShowDebugInfo: 0
+      volume: 1
+      minTimeBetweenPlay: 0
+      subItemPickMode: 1
+      subItemsList:
+      - audioClip: {fileID: 8300000, guid: e6da086e3b93a4f72a3212629395d3d5, type: 3}
+        volume: 1
+    - itemId: Move
+      mustShowDebugInfo: 0
+      volume: 1
+      minTimeBetweenPlay: 0
+      subItemPickMode: 1
+      subItemsList:
+      - audioClip: {fileID: 8300000, guid: 56c861f361d9a40fbaea80ba2098f9d0, type: 3}
+        volume: 1
+    - itemId: Line
+      mustShowDebugInfo: 0
+      volume: 1
+      minTimeBetweenPlay: 0
+      subItemPickMode: 1
+      subItemsList:
+      - audioClip: {fileID: 8300000, guid: ce4265975e0204efbbd440272644e19d, type: 3}
+        volume: 1
+    - itemId: Triangle
+      mustShowDebugInfo: 0
+      volume: 1
+      minTimeBetweenPlay: 0
+      subItemPickMode: 1
+      subItemsList:
+      - audioClip: {fileID: 8300000, guid: 78a8f1f75d9664cc9841b85888a5b038, type: 3}
+        volume: 1
+    - itemId: Square
+      mustShowDebugInfo: 0
+      volume: 1
+      minTimeBetweenPlay: 0
+      subItemPickMode: 1
+      subItemsList:
+      - audioClip: {fileID: 8300000, guid: ea19f0b8cdbde4008927619b32786aca, type: 3}
+        volume: 1
+    - itemId: End
+      mustShowDebugInfo: 0
+      volume: 1
+      minTimeBetweenPlay: 0
+      subItemPickMode: 1
+      subItemsList:
+      - audioClip: {fileID: 8300000, guid: 902e6de10aaca4f6085115dbb2f0fd28, type: 3}
+        volume: 1
+    lastPlayedId: 

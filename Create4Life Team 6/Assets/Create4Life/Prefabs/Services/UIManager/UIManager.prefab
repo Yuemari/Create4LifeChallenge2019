@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &100100000
+Prefab:
+  m_ObjectHideFlags: 1
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 1086817628142760}
+  m_IsPrefabAsset: 1
+--- !u!1 &1086817628142760
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4305433203462962}
+  - component: {fileID: 114956517948420782}
+  m_Layer: 0
+  m_Name: UIManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4305433203462962
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1086817628142760}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114956517948420782
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1086817628142760}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5cb1cb53455634dbeb4beec5166a91fb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  autoInitialize: 0
+  dontDestroyOnLoad: 1
+  justDisableOnScreenDeactivation: 1
+  allScreenControllers:
+  - uiUniqueId: Intro
+    doNotDestroyOnDeactivation: 0
+    isStartingScreen: 1
+    isActive: 0
+    isSpecialPopUp: 0
+    uiScreenPrefab: {fileID: 114428639787406664, guid: a1d49cb8a3c715f449e4786ad323bbd7,
+      type: 2}
+    uiScreenObject: {fileID: 0}
+    uiScreenPosition: {x: 0, y: 0, z: 0}
+    complementScreenIds: []
+  - uiUniqueId: MainMenu
+    doNotDestroyOnDeactivation: 1
+    isStartingScreen: 0
+    isActive: 0
+    isSpecialPopUp: 0
+    uiScreenPrefab: {fileID: 114607004347459462, guid: 46e816ee51195154f8ef060a4ff5e723,
+      type: 2}
+    uiScreenObject: {fileID: 0}
+    uiScreenPosition: {x: 19, y: 0, z: 0}
+    complementScreenIds:
+    - MovingBG
+  - uiUniqueId: Results
+    doNotDestroyOnDeactivation: 1
+    isStartingScreen: 0
+    isActive: 0
+    isSpecialPopUp: 0
+    uiScreenPrefab: {fileID: 114405762948034570, guid: a2ead48b253afe643a0bd70c329b6d1d,
+      type: 2}
+    uiScreenObject: {fileID: 114405762948034570, guid: a2ead48b253afe643a0bd70c329b6d1d,
+      type: 2}
+    uiScreenPosition: {x: 38, y: 11, z: 0}
+    complementScreenIds:
+    - MovingBG
+  - uiUniqueId: Credits
+    doNotDestroyOnDeactivation: 1
+    isStartingScreen: 0
+    isActive: 0
+    isSpecialPopUp: 0
+    uiScreenPrefab: {fileID: 114585126361057872, guid: 56d0fd6d12a05904fbe95c7693271743,
+      type: 2}
+    uiScreenObject: {fileID: 114585126361057872, guid: 56d0fd6d12a05904fbe95c7693271743,
+      type: 2}
+    uiScreenPosition: {x: 0, y: 22, z: 0}
+    complementScreenIds:
+    - MovingBG
+  - uiUniqueId: GameSelection
+    doNotDestroyOnDeactivation: 1
+    isStartingScreen: 0
+    isActive: 0
+    isSpecialPopUp: 0
+    uiScreenPrefab: {fileID: 114094749934663202, guid: 4e392d2da4b4ae8498578cb052b11df0,
+      type: 2}
+    uiScreenObject: {fileID: 0}
+    uiScreenPosition: {x: 19, y: 11, z: 0}
+    complementScreenIds: []
+  - uiUniqueId: Game
+    doNotDestroyOnDeactivation: 0
+    isStartingScreen: 0
+    isActive: 0
+    isSpecialPopUp: 0
+    uiScreenPrefab: {fileID: 114161023034498434, guid: 4db6926fd21408b4e92fa99ce4510604,
+      type: 2}
+    uiScreenObject: {fileID: 0}
+    uiScreenPosition: {x: 38, y: 11, z: 0}
+    complementScreenIds: []
+  canvasScalerMode: 1
+  canvasScalerScreenMatchMode: 0
+  canvasMatchModeRange: 0.5
+  canvasScalerReferenceResolution: {x: 800, y: 600}
+  canvasScalerPixelsPerUnit: 100
+  screenPositionNumberOfColumns: 3
+  addHelpFrameToCreatedScreens: 1
+  helpFramePrefab: {fileID: 1165103553299432, guid: 82f97ad7a13842b4a9b5b73a3c0cff92,
+    type: 2}
+  screenSeparation: {x: 19, y: 11}
+  systemLayer:
+    serializedVersion: 2
+    m_Bits: 0
