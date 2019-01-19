@@ -19,7 +19,6 @@ public class GameService: GameBaseService
 
     public LevelData[] allLevelsData;
     private int currentLevel = -1;
-    private bool isInitialized = false;
 
     public override bool IsServiceNull()
     {
@@ -48,7 +47,6 @@ public class GameService: GameBaseService
         {
             allLevelsData[i].isLevelUnlocked = PlayerPrefs.GetInt("Lvl" + allLevelsData[i].levelId, (allLevelsData[i].isTutorialLevel?1:0) ) == 1;
         }
-        isInitialized = true;
     }
 
     public override void StartGame(int level)
@@ -74,8 +72,8 @@ public class GameService: GameBaseService
                 yield return 0;
             }
             //load level scene
-            string sceneToLoad = string.Format("{0}_{1}",allLevelsData[currentLevel].worldName, allLevelsData[currentLevel].levelName);
-
+            string sceneToLoad = string.Format("{0} {1}",allLevelsData[levelIndex].worldName, allLevelsData[levelIndex].levelName);
+            Debug.LogFormat("Scene to load:{0}",sceneToLoad);
             AsyncOperation operation = SceneManager.LoadSceneAsync(sceneToLoad);
 
             while(!operation.isDone)
@@ -100,6 +98,8 @@ public class GameService: GameBaseService
         }
     }
 
+
+
     public override void EndGame(bool win)
     {
         if(currentLevel >= 0 && win)
@@ -113,6 +113,46 @@ public class GameService: GameBaseService
                     break;
                 }
             }
+        }
+    }
+
+    private IEnumerator LoadMainMenu()
+    {
+        UIManager uiManager = ServiceLocator.Instance.GetServiceOfType<UIManager>(SERVICE_TYPE.UIMANAGER);
+
+        GameHUD hud = uiManager.GetUIScreenForId<GameHUD>(ScreenIds.sGameScreen);
+        if (hud != null)
+        {
+            //start level load transition HERE!
+            hud.StartGameLoad();
+            while (!hud.IsGameLoadPresentationDone())
+            {
+                yield return 0;
+            }
+            //unload level scene
+            string sceneToUnLoad = string.Format("{0} {1}", allLevelsData[currentLevel].worldName, allLevelsData[currentLevel].levelName);
+            Debug.LogFormat("Scene to load:{0}", sceneToUnLoad);
+            AsyncOperation operation = SceneManager.UnloadSceneAsync(sceneToUnLoad);
+
+            while (!operation.isDone)
+            {
+                yield return 0;
+            }
+
+            //TODO: Init world HERE!
+
+            //start level load transition END HERE!
+            hud.FinishGameLoad();
+            while (!hud.IsGameLoadFinishDone())
+            {
+                yield return 0;
+            }
+            //show GameHUDS
+            ServiceLocator.Instance.GetServiceOfType<UIManager>(SERVICE_TYPE.UIMANAGER).SwitchToScreenWithId(ScreenIds.sMainMenuScreen);
+
+
+
+            currentLevel = -1;
         }
     }
 

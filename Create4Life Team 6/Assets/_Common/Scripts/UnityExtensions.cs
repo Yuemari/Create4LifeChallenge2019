@@ -837,4 +837,15 @@ public static class UnityExtensions
             && dt.Second == other.Second;
     }
 
+    public static bool IsBelowPosition(this Collision2D collision, Vector2 position)
+    {
+        for(int i = 0; i < collision.contactCount; ++i)
+        {
+            if(collision.contacts[i].point.y < position.y)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 }

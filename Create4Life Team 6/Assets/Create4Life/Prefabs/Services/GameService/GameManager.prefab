@@ -57,9 +57,15 @@ MonoBehaviour:
   - levelId: 0
     isLevelUnlocked: 0
     isTutorialLevel: 1
+    worldName: Create Challenge
+    levelName: Level 1
   - levelId: 1
     isLevelUnlocked: 0
     isTutorialLevel: 0
+    worldName: Create Challenge
+    levelName: Level 1
   - levelId: 2
     isLevelUnlocked: 0
     isTutorialLevel: 0
+    worldName: Create Challenge
+    levelName: Level 2
