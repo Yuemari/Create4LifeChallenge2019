@@ -83,9 +83,8 @@ MonoBehaviour:
     isSpecialPopUp: 0
     uiScreenPrefab: {fileID: 114405762948034570, guid: a2ead48b253afe643a0bd70c329b6d1d,
       type: 2}
-    uiScreenObject: {fileID: 114405762948034570, guid: a2ead48b253afe643a0bd70c329b6d1d,
-      type: 2}
-    uiScreenPosition: {x: 38, y: 11, z: 0}
+    uiScreenObject: {fileID: 0}
+    uiScreenPosition: {x: 38, y: 0, z: 0}
     complementScreenIds:
     - MovingBG
   - uiUniqueId: Credits
@@ -95,27 +94,26 @@ MonoBehaviour:
     isSpecialPopUp: 0
     uiScreenPrefab: {fileID: 114585126361057872, guid: 56d0fd6d12a05904fbe95c7693271743,
       type: 2}
-    uiScreenObject: {fileID: 114585126361057872, guid: 56d0fd6d12a05904fbe95c7693271743,
-      type: 2}
-    uiScreenPosition: {x: 0, y: 22, z: 0}
+    uiScreenObject: {fileID: 0}
+    uiScreenPosition: {x: 0, y: 11, z: 0}
     complementScreenIds:
     - MovingBG
-  - uiUniqueId: GameSelection
-    doNotDestroyOnDeactivation: 1
-    isStartingScreen: 0
-    isActive: 0
-    isSpecialPopUp: 0
-    uiScreenPrefab: {fileID: 114094749934663202, guid: 4e392d2da4b4ae8498578cb052b11df0,
-      type: 2}
-    uiScreenObject: {fileID: 0}
-    uiScreenPosition: {x: 19, y: 11, z: 0}
-    complementScreenIds: []
   - uiUniqueId: Game
     doNotDestroyOnDeactivation: 0
     isStartingScreen: 0
     isActive: 0
     isSpecialPopUp: 0
     uiScreenPrefab: {fileID: 114161023034498434, guid: 4db6926fd21408b4e92fa99ce4510604,
+      type: 2}
+    uiScreenObject: {fileID: 0}
+    uiScreenPosition: {x: 19, y: 11, z: 0}
+    complementScreenIds: []
+  - uiUniqueId: GameSelection
+    doNotDestroyOnDeactivation: 0
+    isStartingScreen: 0
+    isActive: 0
+    isSpecialPopUp: 0
+    uiScreenPrefab: {fileID: 114094749934663202, guid: 4e392d2da4b4ae8498578cb052b11df0,
       type: 2}
     uiScreenObject: {fileID: 0}
     uiScreenPosition: {x: 38, y: 11, z: 0}

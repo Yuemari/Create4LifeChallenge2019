@@ -166,7 +166,7 @@ public class UIManager : Service
 	{
 		if(Application.isPlaying)
 		{
-			SwitchAllScreens(false,true);
+			SwitchAllScreens(false,false);
 		}
 	}
 

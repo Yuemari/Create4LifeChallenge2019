@@ -28,4 +28,24 @@ public class GameHUD : UIScreen
     {
         ServiceLocator.Instance.GetServiceOfType<UIManager>(SERVICE_TYPE.UIMANAGER).SwitchToScreenWithId(ScreenIds.sMainMenuScreen);
     }
+
+    public bool IsGameLoadPresentationDone()
+    {
+        return true;
+    }
+
+    public void StartGameLoad()
+    {
+
+    }
+
+    public bool IsGameLoadFinishDone()
+    {
+        return true;
+    }
+
+    public void FinishGameLoad()
+    {
+
+    }
 }
